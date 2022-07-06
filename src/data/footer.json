@@ -1,0 +1,55 @@
+
+{
+    "_type" : "footer",
+    "about_us": [
+      {
+        "name": "About Oak Blue",
+        "link": "/about"
+      },
+      {
+        "name": "Meet Our Team",
+        "link": "/team"
+      },
+      {
+        "name": "Where We Build",
+        "link": "/communities"
+      },
+      {
+        "name": "Contact Us",
+        "link": "/contact"
+      }
+    ],
+    "quick_links": [
+      {
+        "name": "Properties",
+        "link": "/properties"
+      },
+      {
+        "name": "Blog",
+        "link": "/blog"
+      },
+      {
+        "name": "Buyers",
+        "link": "/"
+      },
+      {
+        "name": "Sellers",
+        "link": "/"
+      }
+    ],
+    "footerIcons": [
+      {
+        "icon": "../images/footerIcon1.png"
+      },
+      {
+        "icon": "../images/footerIcon2.png"
+      },
+      {
+        "icon": "../images/footerIcon3.png"
+      },
+      {
+        "icon": "../images/footerIcon4.png"
+      }
+    ],
+    "footerImage": "../images/footerBg.jpg"
+  }
