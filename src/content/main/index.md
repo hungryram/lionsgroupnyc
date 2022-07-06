@@ -2,7 +2,7 @@
 sections:
 - type: hero
   background_image: ../../images/newyork.jpg
-  heading: Real Estate Investment, Development & Management
+  heading: Real Estate Development, Management & Construction
   body: With over three decades of experience and knowledge in Residential and Commercial Real Estate Development, Lions Group NYC has risen as one of the most premier developers serving New York with a portfolio valued over $500 Million.
 - type: intro
   heading: Modern Amenities

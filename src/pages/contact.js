@@ -22,7 +22,7 @@ export default function Contact({ data }) {
                 </div>
                 <div className="section">
                     <div className="container">
-                        <div className="flex gap-40">
+                        <div className="md:flex flex-none gap-40">
                             <div className="lg:w-1/2">
                                 <div className="bg-white p-10 -mt-60 z-50 relative">
                                     <div className="text-center">

@@ -42,7 +42,7 @@ export default function Navbar() {
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/">
                                 <StaticImage
-                                    src="../../images/lionsgrouplogo.webp"
+                                    src="../../images/lions-group-logo-dark.png"
                                     width="200"
                                 />
                                 </Link>

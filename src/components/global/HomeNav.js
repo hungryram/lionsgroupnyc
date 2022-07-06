@@ -5,6 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, StaticQuery, graphql } from "gatsby"
 import { useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image"
+import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu"
 
 export default function Navbar() {
 
@@ -41,13 +42,13 @@ export default function Navbar() {
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/">
-                                <GatsbyImage
-                                    image={data.appearance.branding.logo.childImageSharp.gatsbyImageData}
-                                />
+                                    <GatsbyImage
+                                        image={data.appearance.branding.logo.childImageSharp.gatsbyImageData}
+                                    />
                                 </Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
-                            <Link to="/coming-soon">Coming Soon</Link>
+                                <Link to="/coming-soon">Coming Soon</Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/about/">About</Link>
@@ -58,9 +59,42 @@ export default function Navbar() {
                         </ul>
                     </nav>
 
-                    <div className="z-50 relative md:hidden">
-                        <div className="nav">
-
+                    <div className="z-50 absolute left-0 right-0  md:hidden" style={{
+                        borderBottom: '1px solid rgba(255,255,255,0.2)'
+                    }}>
+                        <div className="nav py-4">
+                            <div className="flex text-center items-center">
+                                <div className="flex-1 text-white">
+                                    <span>Pay rent</span>
+                                </div>
+                                <div className="flex-1">
+                                    <Link to="/">
+                                        <GatsbyImage
+                                            image={data.appearance.branding.logo.childImageSharp.gatsbyImageData}
+                                        />
+                                    </Link>
+                                </div>
+                                <div className="flex-1">
+                                    <div id="toggle" onClick={() => setActive(!active)}>
+                                        {active ?
+                                            <>
+                                            <AiOutlineMenu />
+                                            </>
+                                            :
+                                            <>
+                                            </>}
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <ul style={{ listStyle: "none", padding: "0" }}
+                                    className={active ? "hidden" : "block"}>
+                                    <li>Link 1</li>
+                                    <li>Link 2</li>
+                                    <li>Link 3</li>
+                                    <li>Link 4</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
 

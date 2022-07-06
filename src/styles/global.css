@@ -87,25 +87,5 @@ md.content p {
     top: 0;
 }
 
-  .nav {
-    position: fixed;
-    width: 100vw;
-    border-bottom: black 1px solid;
-  }
-  .nav-menu {
-    height: 35px;
-    overflow: hidden;
-    transition: ease height 0.3s; /* <--- ease in */
-  }
-  .nav-menu-active {
-    height: 120px; /* <--- set height */
-    transition: ease height 0.3s; /* <--- ease out */
-    margin-top: 35px; /* <--- same margin as ul */
-  }
-  .nav-menu ul {
-    margin-top: 35px;
-  }
-  #toggle {
-    position: absolute;
-  }
-  
+
+

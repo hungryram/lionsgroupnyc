@@ -3,38 +3,30 @@
     "_type" : "footer",
     "about_us": [
       {
-        "name": "About Oak Blue",
-        "link": "/about"
+        "name": "About Lions Group",
+        "link": "/about/"
       },
       {
-        "name": "Meet Our Team",
-        "link": "/team"
+        "name": "Availability",
+        "link": "/availability"
       },
       {
-        "name": "Where We Build",
-        "link": "/communities"
+        "name": "Portfolio",
+        "link": "/portfolio/"
       },
       {
         "name": "Contact Us",
-        "link": "/contact"
+        "link": "/contact/"
       }
     ],
     "quick_links": [
       {
-        "name": "Properties",
-        "link": "/properties"
+        "name": "Facebook",
+        "link": "https://www.facebook.com/lionsgroupnyc/"
       },
       {
-        "name": "Blog",
-        "link": "/blog"
-      },
-      {
-        "name": "Buyers",
-        "link": "/"
-      },
-      {
-        "name": "Sellers",
-        "link": "/"
+        "name": "Linkedin",
+        "link": "https://www.linkedin.com/company/lions-group-nyc/"
       }
     ],
     "footerIcons": [
