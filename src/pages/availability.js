@@ -17,8 +17,8 @@ export default function Availability() {
                           </script><script type='text/javascript' charset='utf-8'>
                           Appfolio.Listing({
                             hostUrl: 'lionsgroup.appfolio.com',
-                            themeColor: '#676767',
-                            height: '500px',
+                            themeColor: '#0E0F3C',
+                            height: '100%',
                             width: '100%',
                             defaultOrder: 'date_posted'
                           });
