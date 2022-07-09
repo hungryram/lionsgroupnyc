@@ -8,8 +8,9 @@ export default function Availability() {
         <>
             <Layout>
                 <div className="section">
-                    <div className="container">
+                    <div>
                         <div
+                            className="h-screen w-full"
                             dangerouslySetInnerHTML={{
                                 __html: `<script type='text/javascript' charset='utf-8'>
                             document.write(unescape("%3Cscript src='" + (('https:' == document.location.protocol) ? 'https:' : 'http:') + "//lionsgroup.appfolio.com/javascripts/listing.js' type='text/javascript'%3E%3C/script%3E"));
