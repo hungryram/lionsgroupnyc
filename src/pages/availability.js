@@ -1,7 +1,5 @@
 import * as React from "react"
 import Layout from "../components/global/Layout"
-import AvailabilityScript from "../components/templates/AvailabilityScript"
-import { Script } from "gatsby"
 
 export default function Availability() {
     return (

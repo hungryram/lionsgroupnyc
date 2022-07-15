@@ -79,14 +79,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        "name": "comingsoon",
-        "path": `${__dirname}/src/content/coming-soon/`
-      },
-      __key: "comingsoon"
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         "name": "main",
         "path": `${__dirname}/src/content/main/`
       },

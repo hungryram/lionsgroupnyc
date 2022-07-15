@@ -48,10 +48,10 @@ export default function Navbar() {
                                 </Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
-                                <Link to="/coming-soon">Coming Soon</Link>
+                                <Link to="/about/">About</Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
-                                <Link to="/about/">About</Link>
+                                <a href="https://lionsgroup.appfolio.com/connect/users/sign_in?a=cw&utm_source=apmsites_v3&utm_campaign=pay_rent_button" target="_blank">Pay Rent</a>
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/contact/">Contact</Link>

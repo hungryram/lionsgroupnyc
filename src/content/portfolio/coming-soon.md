@@ -1,10 +1,11 @@
 ---
-title: Coming Soon
+title: The Coming Soon
 address: 15 Bond Street
 city: Great Neck
 state: NY
 zip_code: 11021
-image: ../../images/15-bond.webp
+image: 
+status: Coming Soon
 details:
     floors: 4
     units: 

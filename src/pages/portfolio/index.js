@@ -30,6 +30,7 @@ export default function PortfolioIndex({ data }) {
                                     city={node.frontmatter.city}
                                     state={node.frontmatter.state}
                                     zipCode={node.frontmatter.zip_code}
+                                    status={node.frontmatter.status}
                                 />
                             )
                         }) }
@@ -43,27 +44,29 @@ export default function PortfolioIndex({ data }) {
 
 export const query = graphql`
 {
-    allPortfolio {
-      nodes {
-        frontmatter {
-          image {
-            childImageSharp {
-              gatsbyImageData(placeholder: BLURRED, quality: 30)
-            }
-          }
-          city
-          title
-          address
-          zip_code
-          details {
-            built_in
-            floors
-            units
+  allPortfolio(sort: {fields: frontmatter___status, order: ASC}) {
+    nodes {
+      frontmatter {
+        image {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, quality: 30)
           }
         }
-        slug
-        id
+        city
+        title
+        address
+        zip_code
+        status
+        details {
+          built_in
+          floors
+          units
+        }
       }
+      slug
+      id
     }
   }
+}
+
 `
