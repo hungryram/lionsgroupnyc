@@ -13,14 +13,14 @@ export default function Portfolio({ data }) {
                     <div className="container">
                         <div className="flex gap-10">
                             <div className="md:w-3/5">
-                                {image ?
+                                {frontMatter.image ?
                                     <GatsbyImage
                                         image={frontMatter.image.childImageSharp.gatsbyImageData}
                                         className="mb-20"
                                         alt={frontMatter.title}
                                     />
                                     :
-                                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo" className="object-cover h-full w-full" />
+                                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo" className="mb-20" />
 
                                 }
                                 <div className="content">
