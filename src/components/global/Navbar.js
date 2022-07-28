@@ -6,6 +6,10 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { useState } from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
+import { GrClose } from "@react-icons/all-files/gr/GrClose"
+import { HiOutlineMenuAlt4 } from "@react-icons/all-files/hi/HiOutlineMenuAlt4"
+import { IconContext } from "@react-icons/all-files";
+
 export default function Navbar() {
 
     const [active, setActive] = useState(true);
@@ -41,10 +45,10 @@ export default function Navbar() {
                             </li>
                             <li className="inline-block mx-5 font-light">
                                 <Link to="/">
-                                <StaticImage
-                                    src="../../images/lions-group-logo-dark.png"
-                                    width="200"
-                                />
+                                    <StaticImage
+                                        src="../../images/lions-group-logo-dark.png"
+                                        width="200"
+                                    />
                                 </Link>
                             </li>
                             <li className="inline-block mx-5 font-light">
@@ -61,15 +65,35 @@ export default function Navbar() {
 
                     <div className="z-50 relative md:hidden">
                         <div className="nav">
-                            <div id="toggle" onClick={() => setActive(!active)}>
-                                {active ? "open" : "close"}
+                            <div id="toggle" className="cursor-pointer flex justify-end" onClick={() => setActive(!active)}>
+                                {active ?
+                                    <IconContext.Provider value={{
+                                        size: '30px'
+                                    }}>
+                                        <HiOutlineMenuAlt4 />
+                                    </IconContext.Provider>
+                                    :
+                                    <IconContext.Provider value={{
+                                        size: '20px'
+                                    }}>
+                                        <GrClose />
+                                    </IconContext.Provider>
+                                }
                             </div>
                             <div className={active ? "nav-menu" : "nav-menu-active"}>
-                                <ul style={{ listStyle: "none", padding: "0" }}>
-                                    <li>Link 1</li>
-                                    <li>Link 2</li>
-                                    <li>Link 3</li>
-                                    <li>Link 4</li>
+                                <ul style={{ listStyle: "none", padding: "0" }} className="mt-5">
+                                    <li className="border-t flex items-center">
+                                        <Link to="" className="font-medium ml-10 block w-full py-2">test</Link>
+                                    </li>
+                                    <li className="border-t flex items-center">
+                                        <Link to="" className="font-medium ml-10 block w-full py-2">test</Link>
+                                    </li>
+                                    <li className="border-t flex items-center">
+                                        <Link to="" className="font-medium ml-10 block w-full py-2">test</Link>
+                                    </li>
+                                    <li className="border-t flex items-center">
+                                        <Link to="" className="font-medium ml-10 block w-full py-2">test</Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

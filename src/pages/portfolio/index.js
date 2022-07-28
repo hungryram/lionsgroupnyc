@@ -4,7 +4,7 @@ import Layout from "../../components/global/Layout"
 import PortfolioCard from "../../components/templates/PortfolioCard"
 
 export default function PortfolioIndex({ data }) {
-    const frontMatter = data.allPortfolio.nodes
+    const frontMatter = data.allSanityPortfolio.nodes
 
     return (
         <>
@@ -22,15 +22,12 @@ export default function PortfolioIndex({ data }) {
                         {frontMatter.map((node) => {
                             return (
                                 <PortfolioCard
-                                    image={node.frontmatter.image}
-                                    title={node.frontmatter.title}
-                                    link={"/portfolio" + node.slug}
+                                    image={node.mainImage?.asset.gatsbyImageData}
+                                    title={node.title}
+                                    link={node.slug.current}
                                     _key={node.id}
-                                    address={node.frontmatter.address}
-                                    city={node.frontmatter.city}
-                                    state={node.frontmatter.state}
-                                    zipCode={node.frontmatter.zip_code}
-                                    status={node.frontmatter.status}
+                                    address={node.address}
+                                    status={node.comingSoon}
                                 />
                             )
                         }) }
@@ -44,27 +41,20 @@ export default function PortfolioIndex({ data }) {
 
 export const query = graphql`
 {
-  allPortfolio(sort: {fields: frontmatter___status, order: ASC}) {
+  allSanityPortfolio(sort: {fields: comingSoon, order: ASC}) {
     nodes {
-      frontmatter {
-        image {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, quality: 30)
-          }
-        }
-        city
-        title
-        address
-        zip_code
-        status
-        details {
-          built_in
-          floors
-          units
+      slug {
+        current
+      }
+      title
+      address
+      altTag
+      mainImage {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
-      slug
-      id
+      comingSoon
     }
   }
 }

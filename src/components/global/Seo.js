@@ -8,9 +8,7 @@ const Seo = ({ children, metaDescription, titleTag, pageImage, pageUrl, pageKeyw
       <React.Fragment>
   
         <Helmet
-          defaultTitle={siteData.title}
           htmlAttributes={{ lang: 'en' }}
-          titleTemplate={`${siteData.title} | ${titleTag}`}
         >
   
           <title>{titleTag || metaDescription}</title>

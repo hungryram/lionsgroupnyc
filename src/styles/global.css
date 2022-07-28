@@ -34,7 +34,7 @@
     }
 }
 
-.md-content h1, .md-content h2, .md-content h3, .md-content h4, .md-content h5, .md-content h6 {
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
     @apply font-medium mb-2 my-5;
     font-family: 'Marcellus', serif;
 }
@@ -43,31 +43,31 @@ md.content p {
     @apply mt-2 mb-5 
 }
 
-.md-content h1 {
+.content h1 {
     @apply text-3xl;
 }
 
-.md-content h2 {
+.content h2 {
     @apply text-2xl;
 }
 
-.md-content h3 {
+.content h3 {
     @apply text-xl;
 }
 
-.md-content h4 {
+.content h4 {
     @apply text-lg;
 }
 
-.md-content p {
+.content p {
     @apply my-2;
 }
 
-.md-content ul, .md-content ol {
+.content ul, .content ol {
     @apply my-2 list-disc ml-5;
 }
 
-.md-content li {
+.content li {
     @apply my-1;
 }
 
@@ -87,5 +87,28 @@ md.content p {
     top: 0;
 }
 
+.header-show {
+    background: #0e0f3c;
+    height: auto; 
+    opacity: 1;
+    transition: background 0ms 0ms, opacity 600ms 0ms;
+}
 
+.header-hide {
+    transition: background 0ms 400ms, opacity 400ms 0ms;
+
+}
+
+
+div.hide {
+    overflow: hidden;  /* Hide the element content, while height = 0 */
+    height: 0;
+    opacity: 0;
+    transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+
+div.show {
+    opacity: 1;
+    transition: height 0ms 0ms, opacity 600ms 0ms;
+}
 

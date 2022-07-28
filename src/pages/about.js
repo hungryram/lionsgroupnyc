@@ -35,12 +35,12 @@ export default function About({ data }) {
                                     </div>
                                     <div className="my-10">
                                         <PrimaryButton
-                                            link="Contact Us"
+                                            link="/contact/"
                                             label="Contact Us"
                                             className="primary-button"
                                         />
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                         </div>
                     </div>

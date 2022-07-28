@@ -10,13 +10,13 @@ export default function PortfolioCard({ image, title, link, _key, address, city,
                 <div class="w-full bg-white hover:shadow-lg hover:transition-all transition-all hover:ease-in ease-in relative">
                     {status &&
                         <div className="absolute px-1 m-2 text-xs bg-black text-white">
-                            <p>{status}</p>
+                            <p>Coming Soon</p>
                         </div>
                     }
                     <div className="h-64 w-full">
                         {image ?
                             <GatsbyImage
-                                image={image.childImageSharp.gatsbyImageData}
+                                image={image}
                                 className="object-cover h-full w-full"
                                 alt={title}
                             />
