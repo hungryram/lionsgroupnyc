@@ -1,14 +1,10 @@
 import * as React from "react"
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, StaticQuery, graphql } from "gatsby"
 import { useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image"
 import { BiCaretDown } from "@react-icons/all-files/bi/BiCaretDown"
 
 import { IconContext } from "@react-icons/all-files";
-import { GrClose } from "@react-icons/all-files/gr/GrClose"
 import { BiMenu } from "@react-icons/all-files/bi/BiMenu"
 import { MdClose } from "@react-icons/all-files/md/MdClose"
 
