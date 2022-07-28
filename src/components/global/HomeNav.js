@@ -1,7 +1,4 @@
 import * as React from "react"
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link, StaticQuery, graphql } from "gatsby"
 import { useState } from "react";
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -9,8 +6,10 @@ import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu"
 import { BiCaretDown } from "@react-icons/all-files/bi/BiCaretDown"
 
 import { IconContext } from "@react-icons/all-files";
-import { GrClose } from "@react-icons/all-files/gr/GrClose"
 import { HiOutlineMenuAlt4 } from "@react-icons/all-files/hi/HiOutlineMenuAlt4"
+
+import { BiMenu } from "@react-icons/all-files/bi/BiMenu"
+import { MdClose } from "@react-icons/all-files/md/MdClose"
 
 export default function Navbar() {
 
@@ -235,17 +234,17 @@ export default function Navbar() {
                                     <div id="toggle" className="cursor-pointer flex justify-end" onClick={openMobileNav ? () => setOpenMobileNav(false) : () => setOpenMobileNav(true)}>
                                         {openMobileNav ?
                                             <IconContext.Provider value={{
-                                                size: '20px',
+                                                size: '30px',
                                                 color: 'white'
                                             }}>
-                                                <GrClose />
+                                                <MdClose />
                                             </IconContext.Provider>
                                             :
                                             <IconContext.Provider value={{
                                                 size: '30px',
                                                 color: 'white'
                                             }}>
-                                                <HiOutlineMenuAlt4 />
+                                                <BiMenu />
                                             </IconContext.Provider>
                                         }
                                     </div>

@@ -15,7 +15,7 @@ export default function Contact({ data }) {
                 <div>
                     <div className="w-full">
                         <StaticImage
-                            src="../images/newyork-city.jpg"
+                            src="../images/newyork-city-blue.jpg"
                             className="object-cover w-full h-96"
                         />
                     </div>
