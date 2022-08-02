@@ -96,7 +96,21 @@ md.content p {
 
 .header-hide {
     transition: background 0ms 400ms, opacity 400ms 0ms;
+}
 
+@media screen and (max-width: 600px) {
+    .main-bg {
+        background-color: #0e0f3c;
+        transition: .4s;
+    }
+}
+
+.bg {
+    background-color: #0e0f3c;
+}
+
+div.bg-transparent {
+    transition: .4s;
 }
 
 

@@ -9,9 +9,9 @@ export default function PortfolioIndex({ data }) {
     return (
         <>
         <Layout>
-            <div className="py-10">
+            <div className="md:py-10 pt-24 pb-10 main-bg">
                 <div className="container">
-                    <h1 className="heading">Our Portfolio</h1>
+                    <h1 className="heading sm:text-black text-white">Our Portfolio</h1>
                 </div>
             </div>
             <div className="section" style={{

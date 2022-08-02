@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GatsbyImage } from "gatsby-plugin-image"
 import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu"
 import { BiCaretDown } from "@react-icons/all-files/bi/BiCaretDown"
@@ -16,7 +16,29 @@ export default function Navbar() {
     const [active, setActive] = useState(true);
 
     const [dropdownActive, setDropdownActive] = useState(null);
-    const [openMobileNav, setOpenMobileNav] = useState(false)
+    const [openMobileNav, setOpenMobileNav] = useState(false);
+
+
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [top, setTop] = useState(true)
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+      if (scrollPosition == 0) {
+        setTop(true)
+      } else if (scrollPosition > 10) {
+        setTop(false)
+      } else if (scrollPosition < 10) {
+        setTop(true)
+      }
+    }
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll)
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    })
 
     return (
         <StaticQuery
@@ -213,7 +235,7 @@ export default function Navbar() {
                         </ul>
                     </nav>
 
-                    <div className={`z-50 fixed left-0 right-0 md:hidden bg-transparent ${openMobileNav ? "header-show" : "header-hide"}`} >
+                    <div className={`z-50 fixed left-0 right-0 md:hidden bg-transparent ${openMobileNav ? "header-show" : "header-hide"} ${top ? 'bg-transparent' : "main-bg"}`} >
                         <div className="nav p-4">
                             <div className="flex items-center">
                                 <div className="flex-1 text-white">
@@ -224,6 +246,7 @@ export default function Navbar() {
                                         {data.sanityAppearances.branding.logo ?
                                             <GatsbyImage
                                                 image={data.sanityAppearances.branding.logo.asset.gatsbyImageData}
+                                                alt="Lions Group logo"
                                             />
                                             :
                                             <h2 className="text-2xl">{data.sanityProfileSettings?.company_name}</h2>
@@ -252,7 +275,7 @@ export default function Navbar() {
                             </div>
 
                         </div>
-                        <div className={`bg-white z-50 py-4 h-screen ${openMobileNav ? "show" : "hide"}`} style={{
+                        <div className={`bg-white z-50 h-screen ${openMobileNav ? "show" : "hide"}`} style={{
                             backgroundColor: '#0e0f3c'
                         }}>
                             <div>
