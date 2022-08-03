@@ -10,9 +10,14 @@ export default function Portfolio({ data }) {
     return (
         <>
             <Layout>
+            <div className="md:py-10 pt-24 pb-10 main-bg">
+                <div className="container">
+                    <h1 className="heading sm:text-black text-white">{frontMatter.title}</h1>
+                </div>
+            </div>
                 <div className="section">
                     <div className="container">
-                        <div className="flex gap-10">
+                        <div className="md:flex gap-10">
                             <div className="md:w-3/5">
                                 {frontMatter.mainImage ?
                                     <GatsbyImage

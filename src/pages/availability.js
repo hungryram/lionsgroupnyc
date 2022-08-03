@@ -5,6 +5,11 @@ export default function Availability() {
     return (
         <>
             <Layout>
+            <div className="md:py-10 pt-24 pb-10 main-bg">
+                <div className="container">
+                    <h1 className="heading sm:text-black text-white">Availability</h1>
+                </div>
+            </div>
                 <div className="section">
                     <div>
                         <div
@@ -23,9 +28,6 @@ export default function Availability() {
                         </script>` }}
                         />
                     </div>
-
-                    <span dmle_extension="custom_extension" icon="false" surround="false" class="widget-0c7b49 u_1154620599" data-widget-id="0c7b497e71504e58ab05a06ffe294671" data-widget-version="129" data-widget-config="eyJmaWx0ZXJQZXRzIjp0cnVlLCJwcm9wZXJ0eUdyb3VwIjoiTGlvbnMgR3JvdXAiLCJpbml0aWFsU29ydCI6Ik1vc3QgUmVjZW50IiwiZmlsdGVyQ2l0eSI6dHJ1ZSwicHJpbWFyeUNvbG9yIjoicmdiYSgxNCwxNSw2MSwxKSIsImZpbHRlclRvZ2dsZXMiOm51bGwsImZpbHRlckJlZHMiOnRydWUsImZpbHRlclNlYXJjaCI6dHJ1ZSwiZmlsdGVyUHJpY2UiOnRydWUsImZpbHRlckF2YWlsYWJsZURhdGUiOnRydWUsIm5vUmVzdWx0c01lc3NhZ2UiOm51bGwsImZpbHRlckJhdGhzIjp0cnVlLCJmaWx0ZXJUeXBlIjp0cnVlLCJoaWRlTWFwIjpudWxsfQ==" id="1154620599" data-binding="W3siYmluZGluZ05hbWUiOiJjb2xsZWN0aW9uRGF0YSIsInZhbHVlIjoic2l0ZV9jb2xsZWN0aW9uLmFwcGZvbGlvLWxpc3RpbmdzIn1d">
-                    </span>
                 </div>
             </Layout>
         </>

@@ -25,12 +25,13 @@ export default function About({ data }) {
                                 <div className="bg-white p-2 -mt-60 z-50 relative">
                                     <GatsbyImage
                                         image={data.markdownRemark.frontmatter.featured_image.childImageSharp.gatsbyImageData}
+                                        alt="tall building in New York"
                                     />
                                 </div>
                             </div>
                             <div className="lg:w-1/2">
                                 <div>
-                                    <div className="md:w-full md-content">
+                                    <div className="md:w-full content">
                                         <div dangerouslySetInnerHTML={{ __html: converter.makeHtml(data.markdownRemark.rawMarkdownBody) }} />
                                     </div>
                                     <div className="my-10">

@@ -56,7 +56,7 @@ export default function Footer() {
                     }
                     footerLogo {
                       asset {
-                        gatsbyImageData(placeholder: BLURRED)
+                        gatsbyImageData(placeholder: BLURRED, width: 200)
                       }
                     }
                   }
@@ -72,16 +72,17 @@ export default function Footer() {
                         <div className="container relative w-full max-h-fit overflow-hidden text-white">
                             <div className="relative w-full py-2 z-20">
                                 <div className="flex flex-col lg:flex-row max-w-screen-2xl mx-auto lg:py-12 px-4 text-secondary">
-                                    <div className="flex flex-col lg:w-1/4 my-auto p-4">
+                                    <div className="flex flex-col lg:w-1/4 my-auto p-4 text-center">
                                         <Link to="/">
                                             <GatsbyImage
                                                 image={data.sanityAppearances.footer.footerLogo.asset.gatsbyImageData}
+                                                alt="Lions Group Logo"
                                             />
                                         </Link>
                                     </div>
                                     <div className="flex flex-col md:mx-auto text-textLight">
                                         <h2 className="text-xl tracking-tight">Links</h2>
-                                        <ul className="my-5">
+                                        <ul className="mb-5">
                                             {data.sanityAppearances.footer.quickLinks.map((link, i) => {
                                                 return (
                                                     <li key={i} className="my-2" >
@@ -100,7 +101,7 @@ export default function Footer() {
                                     </div>
                                     <div className="flex flex-col md:mx-auto text-textLight">
                                         <h2 className="text-xl tracking-tight">Follow us</h2>
-                                        <ul className="my-5">
+                                        <ul className="mb-5">
                                             {data.sanityProfileSettings.social.facebook && <li className="my-2"><a href={data.sanityProfileSettings.social.facebook} target="_blank">Facebook</a></li>}
                                             {data.sanityProfileSettings.social.instagram && <li className="my-2"><a href={data.sanityProfileSettings.social.instagram} target="_blank">Instagram</a></li>}
                                             {data.sanityProfileSettings.social.youtube && <li className="my-2"><a href={data.sanityProfileSettings.social.youtube} target="_blank">Youtube</a></li>}
@@ -110,7 +111,7 @@ export default function Footer() {
                                     </div>
                                     <div className="flex flex-col md:mx-auto text-textLight lg:items-start">
                                         <h2 className="text-xl tracking-tight">Contact</h2>
-                                        <div className="my-5">
+                                        <div className="mb-5">
                                             <div className="flex flex-row items-center my-4" >
                                                 <div className="flex flex-col">
                                                     <span className="text-sm">Call Us</span>
@@ -143,7 +144,7 @@ export default function Footer() {
                     </footer>
                     <div className="text-white py-5 text-sm" style={{ backgroundColor: '#0E0F3C' }}>
                         <div className="container">
-                            <p>2022 Website built by Hungry Ram</p>
+                        <p className="text-sm">&copy; Copyright {new Date().getFullYear()} &middot; <a href="https://www.hungryram.com/" className="uk-link-reset">Hungry Ram LLC</a></p>
                         </div>
                     </div>
                 </>

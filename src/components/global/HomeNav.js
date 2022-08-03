@@ -235,7 +235,7 @@ export default function Navbar() {
                         </ul>
                     </nav>
 
-                    <div className={`z-50 fixed left-0 right-0 md:hidden bg-transparent ${openMobileNav ? "header-show" : "header-hide"} ${top ? 'bg-transparent' : "main-bg"}`} >
+                    <div className={`z-[100] fixed left-0 right-0 md:hidden bg-transparent ${openMobileNav ? "header-show" : "header-hide"} ${top ? 'bg-transparent' : "main-bg"}`} >
                         <div className="nav p-4">
                             <div className="flex items-center">
                                 <div className="flex-1 text-white">
