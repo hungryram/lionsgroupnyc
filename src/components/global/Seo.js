@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 
 export default function Seo({ title, description, schemaMarkup }) {
 
-  const titleTag = title;
-  const metaDescription = description;
+  const titleTag = title || "Lions Group";
+  const metaDescription = description || "Lions Group";
 
   return (
     <Helmet
-      title={title}
+
       meta={[
         {
           name: 'description',
@@ -48,6 +48,7 @@ export default function Seo({ title, description, schemaMarkup }) {
         },
       ]}
     >
+      
       {schemaMarkup &&
         <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       }
