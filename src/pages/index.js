@@ -1,17 +1,21 @@
 import { graphql } from "gatsby"
 import * as React from "react"
 import Footer from "../components/global/Footer"
-import Navbar from "../components/global/Navbar"
 import HomeNav from "../components/global/HomeNav"
 import Banner from "../components/templates/Banner"
 import Featured from "../components/templates/Featured"
 import Hero from "../components/templates/Hero"
 import Homeform from "../components/templates/Homeform"
 import Intro from "../components/templates/Intro"
+import Seo from "../components/global/Seo"
 
 export default function Index({ data }) {
   return (
     <>
+    <Seo 
+      title={data.sanityProfileSettings.seo.title_tag}
+      description={data.sanityProfileSettings.seo.meta_description}
+    />
         <HomeNav />
        {data.file.childMarkdownRemark.frontmatter.sections.map((section, i) => {
           if(section.type === 'hero') {
@@ -77,7 +81,7 @@ export default function Index({ data }) {
 }
 
 export const query = graphql`
-query {
+{
   file(sourceInstanceName: {eq: "main"}) {
     childMarkdownRemark {
       frontmatter {
@@ -95,6 +99,12 @@ query {
           button_label
         }
       }
+    }
+  }
+  sanityProfileSettings {
+    seo {
+      title_tag
+      meta_description
     }
   }
 }

@@ -2,8 +2,8 @@
 title: About
 featured_image: ../../images/vista-640w.webp
 search_engine_optimization:
-    title_tag:
-    meta_description:
+    title_tag: About Lions Group | Lions Group
+    meta_description: Since 1984, Lions Group has excelled in driving quality projects within the famously aggressive New York real estate market.
 ---
 
 ## Our History

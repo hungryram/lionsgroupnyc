@@ -1,15 +1,20 @@
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../components/global/Layout"
 import Showdown from "showdown"
 import PrimaryButton from "../components/ui/PrimaryButton"
+import Seo from "../components/global/Seo"
 
 export default function About({ data }) {
     const converter = new Showdown.Converter()
     return (
         <>
             <Layout>
+                <Seo 
+                    title={data.markdownRemark.frontmatter.search_engine_optimization.title_tag}
+                    description={data.markdownRemark.frontmatter.search_engine_optimization.meta_description}
+                />
                 <div>
                     <div className="w-full">
                         <StaticImage
@@ -60,6 +65,10 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, quality: 50)
           }
+        }
+        search_engine_optimization {
+            title_tag
+            meta_description
         }
       }
       rawMarkdownBody

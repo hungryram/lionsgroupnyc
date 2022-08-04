@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import Layout from "../../components/global/Layout"
+import Seo from "../../components/global/Seo"
 
 export default function Portfolio({ data }) {
 
@@ -10,6 +11,10 @@ export default function Portfolio({ data }) {
     return (
         <>
             <Layout>
+                <Seo
+                    title={frontMatter.seo.title_tag}
+                    description={frontMatter.seo.meta_description}
+                />
             <div className="md:py-10 pt-24 pb-10 main-bg">
                 <div className="container">
                     <h1 className="heading sm:text-black text-white">{frontMatter.title}</h1>
@@ -26,7 +31,7 @@ export default function Portfolio({ data }) {
                                         alt={frontMatter.altTag}
                                     />
                                     :
-                                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="no photo" className="mb-20" />
+                                    <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="empty avatar" className="mb-20" />
 
                                 }
                                 <div className="content">

@@ -1,42 +1,56 @@
-import * as React from 'react';
-import { Helmet } from 'react-helmet';
+import * as React from "react";
+import { Helmet } from "react-helmet";
 
-const Seo = ({ children, metaDescription, titleTag, pageImage, pageUrl, pageKeywords }) => {
-  
-    return (
-  
-      <React.Fragment>
-  
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-        >
-  
-          <title>{titleTag || metaDescription}</title>
-  
-          <meta name="description" content={metaDescription} />
-          <meta name="keywords" content={pageKeywords} />
-  
-          {/* FB Meta Tags */}
-  
-          <meta property="og:title" content={titleTag}/>
-          <meta property="og:description" content={metaDescription}/>
-          <meta property="og:image" content={pageImage} />
-          <meta property="og:url" content={pageUrl} />
-  
-          {/* Twitter Meta Tags */}
-  
-          <meta name="twitter:title" content={titleTag}/>
-          <meta name="twitter:description" content={metaDescription}/>
-          <meta name="twitter:image" content={pageImage}/>
-          <meta name="twitter:card" content="summary_large_image"/>
-  
-          {children}
-          
-        </Helmet>
-        
-      </React.Fragment>
-  
-    );
-  }
-  
-  export default Seo;
+export default function Seo({ title, description, schemaMarkup }) {
+
+  const titleTag = title;
+  const metaDescription = description;
+
+  return (
+    <Helmet
+      title={title}
+      meta={[
+        {
+          name: 'description',
+          content: metaDescription,
+        },
+        {
+          name: 'og:type',
+          content: 'website',
+        },
+        {
+          name: 'og:title',
+          content: titleTag,
+        },
+        {
+          name: 'og:description',
+          content: metaDescription,
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'twitter:description',
+          content: metaDescription,
+        },
+        {
+          name: 'twitter:title',
+          content: titleTag,
+        },
+        {
+          name: 'twitter:image',
+          content: '',
+        },
+        {
+          name: 'twitter:creator',
+          content: ''
+        },
+      ]}
+    >
+      {schemaMarkup &&
+        <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
+      }
+    </Helmet>
+  )
+}

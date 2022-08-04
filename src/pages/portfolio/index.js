@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../../components/global/Layout"
 import PortfolioCard from "../../components/templates/PortfolioCard"
+import Seo from "../../components/global/Seo"
 
 export default function PortfolioIndex({ data }) {
     const frontMatter = data.allSanityPortfolio.nodes
@@ -9,6 +10,10 @@ export default function PortfolioIndex({ data }) {
     return (
         <>
         <Layout>
+          <Seo
+            title="Our Portfolio | Lions Group"
+            description="View our portfolio of properties here. Have a question about something you see? Contact us today!"
+          />
             <div className="md:py-10 pt-24 pb-10 main-bg">
                 <div className="container">
                     <h1 className="heading sm:text-black text-white">Our Portfolio</h1>

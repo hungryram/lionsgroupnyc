@@ -1,6 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
 import * as React from "react"
-import i from "../../images/luxury-image.png"
 import PrimaryButton from "../ui/PrimaryButton"
 
 export default function Intro({ heading, body }) {
