@@ -8,7 +8,7 @@ export default function Seo({ title, description, schemaMarkup }) {
 
   return (
     <Helmet
-
+      title={title}
       meta={[
         {
           name: 'description',
