@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 export default function Seo({ title, description, schemaMarkup }) {
 
   const titleTag = title || "Lions Group";
-  const metaDescription = description || "Lions Group";
+  const metaDescription = description || "Lions Groups";
 
   return (
     <Helmet
