@@ -9,7 +9,6 @@ import { MdClose } from "@react-icons/all-files/md/MdClose"
 
 export default function Navbar() {
 
-    const [active, setActive] = useState(true);
 
     const [dropdownActive, setDropdownActive] = useState(null);
     const [openMobileNav, setOpenMobileNav] = useState(false);

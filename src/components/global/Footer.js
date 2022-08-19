@@ -9,7 +9,7 @@ export default function Footer() {
             query={graphql`
             {
                 sanityProfileSettings {
-                company_name
+                  company_name
                   contact_information {
                     phone_number
                     email
@@ -60,6 +60,15 @@ export default function Footer() {
                     }
                   }
                 }
+                allSanityLegal {
+                  nodes {
+                    slug {
+                      current
+                    }
+                    title
+                    id
+                  }
+                }
               }
               
             `}
@@ -101,11 +110,11 @@ export default function Footer() {
                                     <div className="flex flex-col md:mx-auto text-textLight">
                                         <h2 className="text-xl tracking-tight">Follow us</h2>
                                         <ul className="mb-5">
-                                            {data.sanityProfileSettings.social.facebook && <li className="my-2"><a href={data.sanityProfileSettings.social.facebook} target="_blank" rel="noopener">Facebook</a></li>}
-                                            {data.sanityProfileSettings.social.instagram && <li className="my-2"><a href={data.sanityProfileSettings.social.instagram} target="_blank" rel="noopener">Instagram</a></li>}
-                                            {data.sanityProfileSettings.social.youtube && <li className="my-2"><a href={data.sanityProfileSettings.social.youtube} target="_blank" rel="noopener">Youtube</a></li>}
-                                            {data.sanityProfileSettings.social.pinterest && <li className="my-2"><a href={data.sanityProfileSettings.social.pinterest} target="_blank" rel="noopener">Pinterest</a></li>}
-                                            {data.sanityProfileSettings.social.linkedin && <li className="my-2"><a href={data.sanityProfileSettings.social.linkedin} target="_blank" rel="noopener">Linkedin</a></li>}
+                                            {data.sanityProfileSettings.social.facebook && <li className="my-2"><a href={data.sanityProfileSettings.social.facebook} target="_blank" rel="noreferrer noopener">Facebook</a></li>}
+                                            {data.sanityProfileSettings.social.instagram && <li className="my-2"><a href={data.sanityProfileSettings.social.instagram} target="_blank" rel="noreferrer noopener">Instagram</a></li>}
+                                            {data.sanityProfileSettings.social.youtube && <li className="my-2"><a href={data.sanityProfileSettings.social.youtube} target="_blank" rel="noreferrer noopener">Youtube</a></li>}
+                                            {data.sanityProfileSettings.social.pinterest && <li className="my-2"><a href={data.sanityProfileSettings.social.pinterest} target="_blank" rel="noreferrer noopener">Pinterest</a></li>}
+                                            {data.sanityProfileSettings.social.linkedin && <li className="my-2"><a href={data.sanityProfileSettings.social.linkedin} target="_blank" rel="noreferrer noopener">Linkedin</a></li>}
                                         </ul>
                                     </div>
                                     <div className="flex flex-col md:mx-auto text-textLight lg:items-start">
@@ -143,7 +152,20 @@ export default function Footer() {
                     </footer>
                     <div className="text-white py-5 text-sm" style={{ backgroundColor: '#0E0F3C' }}>
                         <div className="container">
-                        <p className="text-sm font-light pt-0">&copy; Copyright {new Date().getFullYear()} &middot; {data.sanityProfileSettings.company_name} &middot; Website built by <a href="https://www.hungryram.com/" className="accent" target="_blank" rel="noopener">Hungry Ram</a></p>
+                        <div className="md:flex">
+                                <div className="md:w-full">
+                                    <p className="text-sm font-light pt-0">&copy; Copyright {new Date().getFullYear()} &middot; {data.sanityProfileSettings.company_name} &middot; Website built by <a href="https://www.hungryram.com/" className="accent" rel="noreferrer">Hungry Ram</a></p>
+                                </div>
+                                <div className="m:w-1/2 w-full md:text-right">
+                                    <ul>
+                                        {data.allSanityLegal.nodes.map((node) => {
+                                            return (
+                                                <li className="inline mx-2 text-sm font-light" key={node.id}><Link to={"/legal/" + node.slug.current}>{node.title}</Link></li>
+                                            )
+                                        })}
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </>

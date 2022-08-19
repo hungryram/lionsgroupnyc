@@ -18,7 +18,7 @@ export default function PortfolioCard({ image, title, link, _key, address, city,
                             <GatsbyImage
                                 image={image}
                                 className="object-cover h-full w-full"
-                                alt={title}
+                                alt={title ? title : 'Lions Group'}
                             />
                             :
                             <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="empty avatar" className="object-cover h-full w-full"/>
