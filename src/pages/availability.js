@@ -17,7 +17,7 @@ export default function Availability() {
             </div>
                 <div>
                     <div className="md:px-20">
-                        <iframe src="https://lionsgroup.appfolio.com/listings?1659574158426&theme_color=%230E0F3C&filters%5Border_by%5D=date_posted" title="Availability Properties list" className="w-full h-screen" frameborder="0"></iframe>
+                        <iframe src="https://lionsgroup.appfolio.com/listings?1659574158426&theme_color=%230E0F3C&filters%5Border_by%5D=date_posted" title="Availability Properties list" className="w-full h-screen" frameBorder="0"></iframe>
                     </div>
                 </div>
             </Layout>

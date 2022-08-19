@@ -2,12 +2,8 @@ import * as React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { useState, useEffect } from "react";
 import { GatsbyImage } from "gatsby-plugin-image"
-import { AiOutlineMenu } from "@react-icons/all-files/ai/AiOutlineMenu"
 import { BiCaretDown } from "@react-icons/all-files/bi/BiCaretDown"
-
 import { IconContext } from "@react-icons/all-files";
-import { HiOutlineMenuAlt4 } from "@react-icons/all-files/hi/HiOutlineMenuAlt4"
-
 import { BiMenu } from "@react-icons/all-files/bi/BiMenu"
 import { MdClose } from "@react-icons/all-files/md/MdClose"
 
@@ -24,7 +20,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const position = window.scrollY;
       setScrollPosition(position);
-      if (scrollPosition == 0) {
+      if (scrollPosition === 0) {
         setTop(true)
       } else if (scrollPosition > 10) {
         setTop(false)

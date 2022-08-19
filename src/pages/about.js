@@ -20,6 +20,7 @@ export default function About({ data }) {
                         <StaticImage
                             src="../images/newyork-city-blue.jpg"
                             className="object-cover w-full h-96"
+                            alt="About Lions Group NY"
                         />
                     </div>
                 </div>

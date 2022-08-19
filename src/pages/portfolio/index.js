@@ -27,10 +27,10 @@ export default function PortfolioIndex({ data }) {
                         {frontMatter.map((node) => {
                             return (
                                 <PortfolioCard
-                                    image={node.mainImage?.asset.gatsbyImageData}
+                                    image={node?.mainImage?.asset.gatsbyImageData}
                                     title={node.title}
                                     link={node.slug.current}
-                                    _key={node.id}
+                                    _key={node._id}
                                     address={node.address}
                                     status={node.comingSoon}
                                 />
@@ -60,8 +60,10 @@ export const query = graphql`
         }
       }
       comingSoon
+      _id
     }
   }
 }
+
 
 `

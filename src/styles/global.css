@@ -126,3 +126,7 @@ div.show {
     transition: height 0ms 0ms, opacity 600ms 0ms;
 }
 
+ul.mt-5.items-center.text-center.text-white.w-full li:hover {
+    background: #060626;
+    transition: .2s ease-in-out;
+}

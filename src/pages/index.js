@@ -25,6 +25,8 @@ export default function Index({ data }) {
                 heading={section.heading}
                 body={section.body}
                 _key={i}
+                buttonLink="/availability/"
+                buttonText="View Availabilities"
               />
             )
           }
@@ -60,6 +62,7 @@ export default function Index({ data }) {
                 altTag={section.image_alt_tag}
                 link={section.button_link}
                 label={section.button_label}
+                _key={i}
               />
             )
           }
@@ -71,6 +74,7 @@ export default function Index({ data }) {
                 heading={section.heading}
                 body={section.body}
                 altTag={section.image_alt_tag}
+                _key={i}
               />
             )
           }

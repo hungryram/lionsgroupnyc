@@ -1,6 +1,6 @@
 import * as React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
-import PrimaryButton from "../ui/PrimaryButton"
+import { Link } from "gatsby"
 
 export default function Hero({ _key, backgroundImage, heading, body, buttonLink, buttonText }) {
     return (
@@ -17,11 +17,9 @@ export default function Hero({ _key, backgroundImage, heading, body, buttonLink,
                     {heading}
                 </h1>
                 <p>{body}</p>
-                <PrimaryButton 
-                    link={buttonLink}
-                    text={buttonText}
-                    className="mt-12"
-                />
+                <div className="mt-10">
+                    <Link to={buttonLink} className="primary-button border-white hover:bg-white hover:text-black transition-all ease-linear">{buttonText}</Link>
+                </div>
             </div>
         </div>
     )

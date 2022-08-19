@@ -24,12 +24,14 @@ export default function Intro({ heading, body }) {
                             <StaticImage
                                 src="../../images/luxury-image.png"
                                 className="object-cover h-full m-2"
+                                alt="Lions Group"
                             />
                             </div>
                             <div className="h-[36rem]">
                             <StaticImage
                                 src="../../images/luxury-living-room.png"
                                 className="object-cover h-full m-2"
+                                alt="Lions Group"
                             />
                             </div>
                         </div>

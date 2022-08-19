@@ -12,8 +12,8 @@ export default function Portfolio({ data }) {
         <>
             <Layout>
                 <Seo
-                    title={frontMatter.seo.title_tag}
-                    description={frontMatter.seo.meta_description}
+                    title={frontMatter?.seo?.title_tag}
+                    description={frontMatter?.seo?.meta_description}
                 />
             <div className="md:py-10 pt-24 pb-10 main-bg">
                 <div className="container">
@@ -28,7 +28,7 @@ export default function Portfolio({ data }) {
                                     <GatsbyImage
                                         image={frontMatter.mainImage.asset.gatsbyImageData}
                                         className="mb-20"
-                                        alt={frontMatter.altTag}
+                                        alt={frontMatter.title}
                                     />
                                     :
                                     <img src="https://res.cloudinary.com/hungryram19/image/upload/v1645813822/Resources/realestate-assets/no-house-photo.jpg" alt="empty avatar" className="mb-20" />
@@ -77,7 +77,6 @@ query ($id: String) {
       floors
       builtIn
       address
-      altTag
       mainImage {
         asset {
           gatsbyImageData(placeholder: BLURRED)

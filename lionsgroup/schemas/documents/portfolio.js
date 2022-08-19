@@ -51,13 +51,6 @@ export default {
             },
           },
           {
-            title: 'Image Alt Tag',
-            name: 'altTag',
-            type: 'string',
-            description: 'Describe your main image',
-            validation: Rule => Rule.required().warning('Describing images will help with ADA compliance and SEO')
-          },
-          {
             name: 'body',
             title: 'Body',
             type: 'blockContent',

@@ -21,6 +21,7 @@ export default function Contact({ data }) {
                         <StaticImage
                             src="../images/newyork-city-blue.jpg"
                             className="object-cover w-full h-96"
+                            alt="New York City"
                         />
                     </div>
                 </div>

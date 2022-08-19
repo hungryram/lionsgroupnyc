@@ -20,7 +20,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const position = window.scrollY;
       setScrollPosition(position);
-      if (scrollPosition == 0) {
+      if (scrollPosition === 0) {
         setTop(true)
       } else if (scrollPosition > 10) {
         setTop(false)
@@ -107,6 +107,9 @@ export default function Navbar() {
                     }
                   }
                 }
+                sanityProfileSettings {
+                  company_name
+                }
               }
               
             `
@@ -119,7 +122,9 @@ export default function Navbar() {
                                 if (link.submenuChild?.length > 0) {
                                     return (
                                         <>
-                                            <li className="relative inline-block m-2"
+                                            <li 
+                                                key={i}
+                                                className="relative inline-block m-2"
                                                 onMouseEnter={dropdownActive === link ? () => setDropdownActive(null) : () => setDropdownActive(link)}>
                                                 <Link
                                                     aria-label={link.internalLink?.name ?? link.internalLink?.title ?? link.text}
@@ -173,6 +178,7 @@ export default function Navbar() {
                                     {data.sanityAppearances.branding?.darkLogo &&
                                         <GatsbyImage
                                             image={data.sanityAppearances.branding?.darkLogo.asset.gatsbyImageData}
+                                            alt={data.sanityProfileSettings.company_name}
                                         />
                                     }
                                 </Link>

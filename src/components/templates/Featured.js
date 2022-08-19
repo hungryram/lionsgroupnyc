@@ -2,10 +2,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import PrimaryButton from "../ui/PrimaryButton"
 
-export default function Featured({ heading, body, backgroundImage, altTag }) {
+export default function Featured({ heading, body, backgroundImage, altTag, _key }) {
     return (
         <>
-            <div className="section">
+            <div className="section" key={_key}>
                 <div className="container">
                     <div className="flex justify-center text-center">
                         <div className="lg:w-3/5 w-full">

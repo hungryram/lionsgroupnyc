@@ -2,10 +2,10 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import * as React from "react"
 import ContactForm from "../ui/ContactForm"
 
-export default function Homeform({ backgroundImage, heading, body, altTag }) {
+export default function Homeform({ backgroundImage, heading, body, altTag, _key }) {
     return (
         <>
-            <div className="section">
+            <div className="section" key={_key}>
                 <div className="container relative">
                     <div className="lg:w-1/3 w-full h-[45rem]">
                         <GatsbyImage
