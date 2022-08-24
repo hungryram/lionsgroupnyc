@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import * as React from "react"
 import Layout from "../../components/global/Layout"
 import PortfolioCard from "../../components/templates/PortfolioCard"
+import Card from "../../components/templates/Card"
 import Seo from "../../components/global/Seo"
 
 export default function PortfolioIndex({ data }) {
@@ -23,7 +24,11 @@ export default function PortfolioIndex({ data }) {
                 backgroundColor: '#FAFAFF'
             }}>
                 <div className="container">
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10">
+                <div className="content mb-20 md:w-3/5">
+                <h2>Exclusive Portfolio</h2>
+                  <p>With over three decades of experience, the team at Lions Group NYC has developed a portfolio valued at more than $500 Million. They are one-of-a kind developers serving New York with their work on both Residential and Commercial real estate development projects</p>
+                </div>
+                    <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
                         {frontMatter.map((node) => {
                             return (
                                 <PortfolioCard
